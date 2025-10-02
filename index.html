@@ -26,22 +26,38 @@
 
             <!-- Menu (Desktop) -->
             <ul class="hidden md:flex space-x-8">
-                <li><a href="#" class="hover:text-yellow-400">Home</a></li>
-                <li><a href="#about" class="hover:text-yellow-400">About Us</a></li>
-                <li><a href="#supplements" class="hover:text-yellow-400">Supplements</a></li>
-                <li><a href="#contact" class="hover:text-yellow-400">Contact Us</a></li>
+                <li><a href="index.html" class="hover:text-yellow-400 transition">Home</a></li>
+                <li><a href="trainer.html" class="hover:text-yellow-400 transition">Trainers</a></li>
+                <li><a href="supplements.html" class="hover:text-yellow-400 transition">Supplements</a></li>
+                <li><a href="pricing.html" class="hover:text-yellow-400 transition">Pricing</a></li>
+                <li>
+                    <a href="adminPortal.html" class="bg-yellow-500 hover:bg-yellow-600 text-black px-6 py-2 rounded-lg font-semibold transition flex items-center space-x-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1" />
+                        </svg>
+                        <span>Login</span>
+                    </a>
+                </li>
             </ul>
-        </div>
 
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="md:hidden hidden bg-gray-800">
-            <ul class="flex flex-col space-y-2 px-6 py-4">
-                <li><a href="#" class="block hover:text-yellow-400">Home</a></li>
-                <li><a href="#about" class="block hover:text-yellow-400">About Us</a></li>
-                <li><a href="#supplements" class="block hover:text-yellow-400">Supplements</a></li>
-                <li><a href="#contact" class="block hover:text-yellow-400">Contact Us</a></li>
-            </ul>
-        </div>
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="md:hidden hidden bg-gray-800">
+                <ul class="flex flex-col space-y-2 px-6 py-4">
+                    <li><a href="index.html" class="block hover:text-yellow-400">Home</a></li>
+                    <li><a href="trainer.html" class="block hover:text-yellow-400">Trainers</a></li>
+                    <li><a href="supplements.html" class="block hover:text-yellow-400">Supplements</a></li>
+                    <li><a href="pricing.html" class="hover:text-yellow-400 transition">Pricing</a></li>
+                    <li>
+                        <a href="adminPortal.html" class="bg-yellow-500 hover:bg-yellow-600 text-black px-6 py-2 rounded-lg font-semibold transition flex items-center space-x-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1" />
+                            </svg>
+                            <span>Login</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
     </nav>
 
     <!-- Small script to toggle menu -->
@@ -53,6 +69,7 @@
             menu.classList.toggle("hidden");
         });
     </script>
+
 
     <!-- Banner -->
     <!-- Banner -->
@@ -174,6 +191,7 @@
         </div>
     </section>
 
+
     <!-- Branches -->
     <section class="max-w-6xl mx-auto py-16 px-6">
         <h2 class="text-3xl md:text-4xl font-extrabold text-center mb-12 text-gray-800">
@@ -216,7 +234,6 @@
             </div>
         </div>
     </section>
-
     <!-- BMI Section -->
     <section class="grid grid-cols-1 md:grid-cols-2">
         <!-- Left Side: What is BMI -->
@@ -227,8 +244,7 @@
                         What is BMI?
                     </h2>
                     <p class="text-lg max-w-md mx-auto leading-relaxed text-gray-200">
-                        Body Mass Index (BMI) is a measure that uses your
-                        height and weight to estimate if you are
+                        Body Mass Index (BMI) is a measure that uses your height and weight to estimate if you are
                         <span class="font-semibold text-yellow-400">underweight, healthy, overweight, or obese</span>.
                     </p>
                 </div>
@@ -243,14 +259,14 @@
                 </h2>
                 <div
                     class="bg-white text-gray-800 rounded-2xl shadow-2xl p-8 transform transition hover:scale-105 duration-300">
-                    <form class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <input type="number" placeholder="Weight (kg)"
+                    <form id="bmiForm" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <input id="weight" type="number" placeholder="Weight (kg)"
                             class="p-3 border rounded-lg focus:ring-2 focus:ring-yellow-400 outline-none transition" />
-                        <input type="number" placeholder="Height (cm)"
+                        <input id="height" type="number" placeholder="Height (cm)"
                             class="p-3 border rounded-lg focus:ring-2 focus:ring-yellow-400 outline-none transition" />
-                        <button type="button" class="col-span-1 md:col-span-2 bg-gradient-to-r from-yellow-500 to-yellow-600 
-            hover:from-yellow-600 hover:to-yellow-700 text-white py-3 rounded-lg 
-            font-semibold shadow-md transition transform hover:scale-105">
+                        <button type="button" id="calcBtn" class="col-span-1 md:col-span-2 bg-gradient-to-r from-yellow-500 to-yellow-600 
+                   hover:from-yellow-600 hover:to-yellow-700 text-white py-3 rounded-lg 
+                   font-semibold shadow-md transition transform hover:scale-105">
                             Calculate
                         </button>
                     </form>
@@ -260,8 +276,35 @@
         </div>
     </section>
 
+    <!-- JS Logic -->
+    <script>
+        document.getElementById("calcBtn").addEventListener("click", function () {
+            const weight = parseFloat(document.getElementById("weight").value);
+            const heightCm = parseFloat(document.getElementById("height").value);
+
+            if (!weight || !heightCm) {
+                document.getElementById("bmiResult").innerText = "⚠️ Please enter valid numbers.";
+                return;
+            }
+
+            const heightM = heightCm / 100; // convert cm → m
+            const bmi = (weight / (heightM * heightM)).toFixed(1);
+
+            let category = "";
+            if (bmi < 18.5) category = "Underweight";
+            else if (bmi < 24.9) category = "Normal";
+            else if (bmi < 29.9) category = "Overweight";
+            else category = "Obese";
+
+            document.getElementById("bmiResult").innerText =
+                `✅ Your BMI is ${bmi} (${category})`;
+        });
+    </script>
+
+
     <!-- Start Your Trial -->
-    <section id="trial" class="relative bg-fixed bg-center bg-cover py-20" style="background-image: url('Source-img/trial.jpg');">
+    <section id="trial" class="relative bg-fixed bg-center bg-cover py-20"
+        style="background-image: url('Source-img/trial.jpg');">
         <!-- Dark overlay -->
         <div class="absolute inset-0 bg-black bg-opacity-70"></div>
 
@@ -359,7 +402,8 @@
     </style>
 
     <!-- Testimonials -->
-    <section class="relative bg-fixed bg-center bg-cover py-20" style="background-image: url('Source-img/testimonial.jpg');">
+    <section class="relative bg-fixed bg-center bg-cover py-20"
+        style="background-image: url('Source-img/testimonial.jpg');">
 
         <!-- Dark overlay -->
         <div class="absolute inset-0 bg-black bg-opacity-70"></div>
@@ -415,10 +459,10 @@
             <div>
                 <h3 class="text-2xl font-bold text-yellow-500 mb-4">Quick Links</h3>
                 <ul class="space-y-2">
-                    <li><a href="#" class="hover:text-yellow-400 transition">Home</a></li>
-                    <li><a href="#about" class="hover:text-yellow-400 transition">About Us</a></li>
-                    <li><a href="#supplements" class="hover:text-yellow-400 transition">Supplements</a></li>
-                    <li><a href="#contact" class="hover:text-yellow-400 transition">Contact Us</a></li>
+                    <li><a href="index.html" class="hover:text-yellow-400 transition">Home</a></li>
+                    <li><a href="trainer.html" class="hover:text-yellow-400 transition">Trainers</a></li>
+                    <li><a href="supplements.html" class="hover:text-yellow-400 transition">Supplements</a></li>
+                    <li><a href="pricing.html" class="hover:text-yellow-400 transition">Pricing</a></li>
                 </ul>
             </div>
 
@@ -427,8 +471,8 @@
                 <h3 class="text-2xl font-bold text-yellow-500 mb-4">Contact</h3>
                 <p>Email: <a href="mailto:getfitness01@gmail.com"
                         class="hover:text-yellow-400 transition">getfitness01@gmail.com</a></p>
-                <p>Phone: <a href="tel:+923001234567" class="hover:text-yellow-400 transition">+92 300 1234567</a></p>
-                <p>Address: Lahore, Pakistan</p>
+                <p>Phone: <a href="tel:+923001234567" class="hover:text-yellow-400 transition">+92 3143586891</a></p>
+                <p>Address: Islampura Alamgir road Lahore, Pakistan</p>
             </div>
         </div>
 
@@ -442,7 +486,7 @@
 
 
 
+
 </body>
 
 </html>
-
