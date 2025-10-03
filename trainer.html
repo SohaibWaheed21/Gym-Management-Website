@@ -10,11 +10,11 @@
 
 <body class="font-sans text-gray-800 bg-gray-50">
 
-  <!-- Navbar -->
-    <nav class="bg-gray-900 text-white sticky top-0 z-50 shadow-md">
+   <!-- Navbar -->
+    <nav class="bg-black text-white sticky top-0 z-50 shadow-xl border-b border-gray-800">
         <div class="max-w-7xl mx-auto px-6 flex justify-between items-center h-16">
             <!-- Logo -->
-            <div class="text-2xl font-bold">GetFit Gym</div>
+            <div class="text-2xl font-bold text-yellow-500">GetFit Gym</div>
 
             <!-- Hamburger Button (Mobile) -->
             <button id="menu-btn" class="md:hidden focus:outline-none">
@@ -25,7 +25,7 @@
             </button>
 
             <!-- Menu (Desktop) -->
-            <ul class="hidden md:flex space-x-8">
+            <ul class="hidden md:flex space-x-8 items-center">
                 <li><a href="index.html" class="hover:text-yellow-400 transition">Home</a></li>
                 <li><a href="trainer.html" class="hover:text-yellow-400 transition">Trainers</a></li>
                 <li><a href="supplements.html" class="hover:text-yellow-400 transition">Supplements</a></li>
@@ -41,23 +41,16 @@
             </ul>
 
             <!-- Mobile Menu -->
-            <div id="mobile-menu" class="md:hidden hidden bg-gray-800">
+            <div id="mobile-menu" class="md:hidden hidden absolute top-16 left-0 right-0 bg-gray-950 border-b border-gray-800">
                 <ul class="flex flex-col space-y-2 px-6 py-4">
-                    <li><a href="index.html" class="block hover:text-yellow-400">Home</a></li>
-                    <li><a href="trainer.html" class="block hover:text-yellow-400">Trainers</a></li>
-                    <li><a href="supplements.html" class="block hover:text-yellow-400">Supplements</a></li>
-                    <li><a href="pricing.html" class="hover:text-yellow-400 transition">Pricing</a></li>
-                    <li>
-                        <a href="adminPortal.html" class="bg-yellow-500 hover:bg-yellow-600 text-black px-6 py-2 rounded-lg font-semibold transition flex items-center space-x-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1" />
-                            </svg>
-                            <span>Login</span>
-                        </a>
-                    </li>
+                    <li><a href="index.html" class="block hover:text-yellow-400 py-2">Home</a></li>
+                    <li><a href="trainer.html" class="block hover:text-yellow-400 py-2">Trainers</a></li>
+                    <li><a href="supplements.html" class="block hover:text-yellow-400 py-2">Supplements</a></li>
+                    <li><a href="pricing.html" class="block hover:text-yellow-400 py-2">Pricing</a></li>
+                    <li><a href="admin-login.html" class="block bg-yellow-500 text-black px-4 py-2 rounded-lg font-semibold text-center mt-2">Login</a></li>
                 </ul>
             </div>
-
+        </div>
     </nav>
     <!-- Page Header -->
     <section class="relative bg-gradient-to-br from-gray-900 via-gray-800 to-black py-20">
@@ -567,3 +560,4 @@
 
 
 </html>
+
